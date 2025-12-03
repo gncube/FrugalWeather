@@ -1,0 +1,93 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "generate-readme",
+			"type": "shell",
+			"command": "node ${workspaceFolder}/update-readme.js",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Generates the README.md file using update-readme.js script."
+		},
+		{
+			"label": "validate-collections",
+			"type": "shell",
+			"command": "node ${workspaceFolder}/validate-collections.js",
+			"problemMatcher": [],
+			"group": "build",
+			"detail": "Validates all collection manifest files."
+		},
+		{
+			"label": "create-collection",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"${workspaceFolder}/create-collection.js",
+				"--id",
+				"${input:collectionId}",
+				"--tags",
+				"${input:tags}"
+			],
+			"problemMatcher": [],
+			"group": "build",
+			"detail": "Creates a new collection manifest template."
+		},
+		{
+			"label": "git-create-feature-branch",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"-C",
+				"c:\\AZUREDEVOPS\\Scriber",
+				"checkout",
+				"-b",
+				"feature/infrastructure-layer-implementation"
+			],
+			"group": "build"
+		},
+		{
+			"label": "noop",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"noop"
+			],
+			"isBackground": false,
+			"group": "none"
+		},
+		{
+			"label": "create_plan_file",
+			"type": "shell",
+			"command": "echo \" \" > plan/refactor-documentation-versioning-1.md"
+		},
+		{
+			"label": "create-implementation-plan",
+			"type": "shell",
+			"command": "echo \"Creating implementation plan...\" > plan/infrastructure-workflow-rename-1.md",
+			"group": "build"
+		},
+		{
+			"label": "rename-workflow-file",
+			"type": "shell",
+			"command": "move .github\\workflows\\azure-webapps-dotnet-core.yml .github\\workflows\\deploy-webapp-prod.yml",
+			"group": "build"
+		}
+	],
+	"inputs": [
+		{
+			"id": "collectionId",
+			"description": "Collection ID (lowercase, hyphen-separated)",
+			"default": "my-collection",
+			"type": "promptString"
+		},
+		{
+			"id": "tags",
+			"description": "Comma separated list of tags",
+			"default": "tag1,tag2",
+			"type": "promptString"
+		}
+	]
+}

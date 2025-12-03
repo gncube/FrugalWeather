@@ -1,0 +1,58 @@
+{
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.formatOnSave": true
+  },
+  "[csharp]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "omnisharp.enableEditorConfigSupport": true,
+  "omnisharp.enableRoslynAnalyzers": true,
+  "chat.modeFilesLocations": {
+    "chatmodes": true,
+    "C:\\Users\\Public\\AWESOME-COPILOT\\chatmodes": true
+  },
+  "chat.promptFilesLocations": {
+    "prompts": true,
+    "C:\\Users\\Public\\AWESOME-COPILOT\\prompts": true
+  },
+  "chat.instructionsFilesLocations": {
+    "instructions": true,
+    "C:\\Users\\Public\\AWESOME-COPILOT\\instructions": true
+  },
+
+  "editor.rulers": [100],
+  "files.associations": {
+    "*.chatmode.md": "markdown",
+    "*.instructions.md": "markdown",
+    "*.prompt.md": "markdown"
+  },
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "file": ".github/awesome-copilot/instructions/gilfoyle-code-review.instructions.md"
+    }
+  ],
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/awesome-copilot/instructions/conventional-commit-message.instructions.md"
+    }
+  ],
+  "azureFunctions.projectSubpath": "src\\API",
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "Web_HostAddress": "https://localhost:7066",
+      "TestUserId": "d1ecd8a5-2230-4c86-9a10-5d60070a708e",
+      "TestPublicationId": "cc3724c6-4b0e-4771-bb4b-eab10e01c076",
+      "TestPostId": "550e8400-e29b-41d4-a716-446655440001",
+      "TestSubscriptionId": "550e8400-e29b-41d4-a716-446655440003",
+      "TestMediaId": "550e8400-e29b-41d4-a716-446655440005",
+      "TestPaymentId": "550e8400-e29b-41d4-a716-446655440004"
+    }
+  }
+}
