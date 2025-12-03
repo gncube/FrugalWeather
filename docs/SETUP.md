@@ -1,3 +1,11 @@
+## Blazor WASM Project Creation
+
+The BlazorStarter project was created using the following command:
+
+```bash
+dotnet new blazorwasm -n FrugalWeather.Client -au IndividualB2C -o src/Client -p -e
+```
+
 The Azure Functions API was created using the command:
 
 ```bash
